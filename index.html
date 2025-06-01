@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nearby Fertilizer Stores & Soil Testing Labs in Pune</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Mukta', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      padding-top: 20px;
+    }
+
+    .container {
+      max-width: 480px;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .search-bar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #388e3c;
+      border-radius: 5px;
+    }
+
+    .stores-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .store-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .store-card:hover {
+      transform: scale(1.05);
+    }
+
+    .store-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #388e3c;
+      margin-bottom: 10px;
+    }
+
+    .store-images {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      gap: 5px;
+    }
+
+    .store-image {
+      width: 48%;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      background-color: #e0e0e0;
+    }
+
+    .store-address {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .call-btn {
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .call-btn:hover {
+      background-color: #2e7d32;
+    }
+
+    .call-btn:focus {
+      outline: none;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 480px) {
+      .store-image {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 10px;
+      }
+
+      .call-btn {
+        width: 100%;
+        font-size: 18px;
+      }
+
+      .store-card {
+        padding: 10px;
+      }
+
+      .search-bar input {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <h2>Soil Testing Labs</h2>
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search for nearby stores or labs..." oninput="filterStores()" />
+    </div>
+
+    <!-- Soil Testing Labs -->
+    <div id="stores-list" class="stores-list">
+      
+      <!-- Soil Testing Lab 1 -->
+      <div class="store-card">
+        <div class="store-name">Soil Testing Lab - A</div>
+        <div class="store-images">
+          <div class="store-image" style="background-image: url('soillabs\ \(1\).png');"></div>
+          <div class="store-image" style="background-image: url('soillabs\ \(2\).png');"></div>
+        </div>
+        <div class="store-address">1, Shivaji Nagar, Pune, Maharashtra</div>
+        <button class="call-btn" onclick="callStore('+912023456789')">Call Lab</button>
+      </div>
+
+      <!-- Soil Testing Lab 2 -->
+      <div class="store-card">
+        <div class="store-name">Agri Soil Test Center</div>
+        <div class="store-images">
+         <div class="store-image" style="background-image: url('soillabs\ \(1\).png');"></div>
+          <div class="store-image" style="background-image: url('soillabs\ \(2\).png');"></div>
+        </div>
+        <div class="store-address">202, Kondhwa, Pune, Maharashtra</div>
+        <button class="call-btn" onclick="callStore('+912024567890')">Call Lab</button>
+      </div>
+
+      <!-- Soil Testing Lab 3 -->
+      <div class="store-card">
+        <div class="store-name">Pune Soil Research Lab</div>
+        <div class="store-images">
+         <div class="store-image" style="background-image: url('soillabs\ \(1\).png');"></div>
+          <div class="store-image" style="background-image: url('soillabs\ \(2\).png');"></div>
+        </div>
+        <div class="store-address">305, Pimple Saudagar, Pune, Maharashtra</div>
+        <button class="call-btn" onclick="callStore('+912025678901')">Call Lab</button>
+      </div>
+
+      <!-- Soil Testing Lab 4 -->
+      <div class="store-card">
+        <div class="store-name">Soil & Water Testing Institute</div>
+        <div class="store-images">
+          <div class="store-image" style="background-image: url('soillabs\ \(1\).png');"></div>
+          <div class="store-image" style="background-image: url('soillabs\ \(2\).png');"></div>
+        </div>
+        <div class="store-address">456, Kharadi, Pune, Maharashtra</div>
+        <button class="call-btn" onclick="callStore('+912027890123')">Call Lab</button>
+      </div>
+
+      <!-- Soil Testing Lab 5 -->
+      <div class="store-card">
+        <div class="store-name">Agriculture Soil Testing Center</div>
+        <div class="store-images">
+       <div class="store-image" style="background-image: url('soillabs\ \(1\).png');"></div>
+          <div class="store-image" style="background-image: url('soillabs\ \(2\).png');"></div>
+        </div>
+        <div class="store-address">567, Baner, Pune, Maharashtra</div>
+        <button class="call-btn" onclick="callStore('+912028901234')">Call Lab</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Function to filter the stores based on search input
+    function filterStores() {
+      const searchInput = document.getElementById("search").value.toLowerCase();
+      const stores = document.getElementsByClassName("store-card");
+
+      for (let i = 0; i < stores.length; i++) {
+        const storeName = stores[i].getElementsByClassName("store-name")[0].innerText.toLowerCase();
+        const storeAddress = stores[i].getElementsByClassName("store-address")[0].innerText.toLowerCase();
+        
+        // Display only the stores that match the search input
+        if (storeName.includes(searchInput) || storeAddress.includes(searchInput)) {
+          stores[i].style.display = "block";
+        } else {
+          stores[i].style.display = "none";
+        }
+      }
+    }
+
+    // Function to call the store
+    function callStore(phoneNumber) {
+      window.location.href = `tel:${phoneNumber}`;
+    }
+  </script>
+
+</body>
+</html>
